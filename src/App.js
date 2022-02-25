@@ -10,7 +10,7 @@ const App=()=> {
         <Route exact path="/" component={Login} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/users" render={(props)=><SideNav actives="users"/>} />
-        <Route exact path="/viewusers" render={(props)=><SideNav actives="viewusers"/>} />
+        <Route exact path="/viewusers/:id" render={(props)=><SideNav actives="viewusers"/>} />
       </Switch>
   </Router>
   );

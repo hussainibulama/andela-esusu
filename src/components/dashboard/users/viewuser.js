@@ -4,11 +4,12 @@ import "./index.scss";
 import user from "../../assets/svg/Vector.svg";
 import rate from "../../assets/svg/Vector(1).png";
 import rates from "../../assets/svg/Vector(1).svg";
-import { useHistory } from "react-router-dom";
+import { useHistory,useParams} from "react-router-dom";
+import data from "./data.json";
 
 const Viewuser=()=> {
   const history = useHistory();
-
+  const Params = useParams();
   return (
         <div className="Section">
             
@@ -73,15 +74,15 @@ const Viewuser=()=> {
                       </div>
                       <div>
                           <p>Phone Number</p>
-                          <h3>07060780922</h3>
+                          <h3>{data[Params.id].phone}</h3>
                       </div>
                       <div>
                           <p>Email Address</p>
-                          <h3>grace@gmail.com</h3>
+                          <h3>{data[Params.id].email}</h3>
                       </div>
                       <div>
                           <p>Bvn</p>
-                          <h3>07060780922</h3>
+                          <h3>{data[Params.id].phone}</h3>
                       </div>
                       <div>
                           <p>Gender</p>

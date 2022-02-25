@@ -1,4 +1,4 @@
-import React, {  useState } from 'react';
+import React, {  useState, useEffect } from 'react';
 import "./index.scss";
 import clsx from "clsx";
 import { makeStyles } from "@mui/styles";
@@ -10,7 +10,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import { useHistory } from "react-router-dom";
-
+import data from "./data.json";
 const useStyles = makeStyles({
     root: {
       "& .super-app":{
@@ -51,13 +51,13 @@ const useStyles = makeStyles({
       },
     },
   });
-const rows = [
-  { id: 1, organization: 'Hello', Username: 'World',Email:"hus@gmail.com",Phone:"08136668344",Date:"14/04/1997",Status:"Active" },
-  { id: 2, organization: 'Hello', Username: 'World',Email:"hus@gmail.com",Phone:"08136668344",Date:"14/04/1997",Status:"Inactive" },
-  { id: 3, organization: 'Hello', Username: 'World',Email:"hus@gmail.com",Phone:"08136668344",Date:"14/04/1997",Status:"Pending" },
-  { id: 4, organization: 'Hello', Username: 'World',Email:"hus@gmail.com",Phone:"08136668344",Date:"14/04/1997",Status:"Blacklisted" },
+// const rows = [
+//   { id: 1, organization: 'Hello', Username: 'World',Email:"hus@gmail.com",Phone:"08136668344",Date:"14/04/1997",Status:"Active" },
+//   { id: 2, organization: 'Hello', Username: 'World',Email:"hus@gmail.com",Phone:"08136668344",Date:"14/04/1997",Status:"Inactive" },
+//   { id: 3, organization: 'Hello', Username: 'World',Email:"hus@gmail.com",Phone:"08136668344",Date:"14/04/1997",Status:"Pending" },
+//   { id: 4, organization: 'Hello', Username: 'World',Email:"hus@gmail.com",Phone:"08136668344",Date:"14/04/1997",Status:"Blacklisted" },
  
-];
+// ];
 const view=<svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15.4533 5.44011L15.452 5.43853C15.0399 4.92195 14.0949 3.82509 12.7977 2.85586C11.4993 1.88564 9.83832 1.03611 7.99968 1.03611C6.16104 1.03611 4.50011 1.88561 3.20166 2.85582C1.9029 3.82627 0.957158 4.92466 0.545819 5.44047C0.274826 5.76662 0.277249 6.2343 0.544833 6.57367L0.544827 6.57368L0.545641 6.57468C0.956296 7.08187 1.90229 8.17692 3.20172 9.14589C4.50012 10.1141 6.16105 10.9636 7.99968 10.9636C9.83832 10.9636 11.4993 10.1141 12.7977 9.1438C14.0967 8.17312 15.0425 7.07437 15.4538 6.55832C15.7074 6.24944 15.7071 5.74922 15.4533 5.44011ZM7.99968 9.75611C6.48691 9.75611 5.06807 9.02252 3.92942 8.17201C2.84501 7.36201 2.02502 6.4537 1.63351 5.9981C2.01625 5.53083 2.83628 4.6224 3.92306 3.81583C5.06351 2.96943 6.48657 2.24347 7.99968 2.24347C9.51274 2.24347 10.9317 2.96936 12.0701 3.81576C13.1557 4.62284 13.9761 5.53202 14.3662 5.99979C13.9762 6.46752 13.1557 7.3767 12.0701 8.18379C10.9317 9.0302 9.51274 9.75611 7.99968 9.75611Z" fill="#545F7D" stroke="#545F7D" stroke-width="0.2"/>
 <path d="M8.00014 2.90818C6.29675 2.90818 4.9083 4.2967 4.9083 6.00002C4.9083 7.70334 6.29682 9.09186 8.00014 9.09186C9.70346 9.09186 11.092 7.70334 11.092 6.00002C11.092 4.29669 9.70346 2.90818 8.00014 2.90818ZM8.00014 7.88386C6.96726 7.88386 6.11646 7.0324 6.11646 6.00018C6.11646 4.96728 6.96732 4.1165 8.00014 4.1165C9.03296 4.1165 9.88382 4.96736 9.88382 6.00018C9.88382 7.033 9.03296 7.88386 8.00014 7.88386Z" fill="#545F7D" stroke="#545F7D" stroke-width="0.2"/>
@@ -77,6 +77,7 @@ const activate=<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns
 const Table=()=> {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
+  const [row, setRow] = useState([]);
   const history = useHistory();
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -84,6 +85,26 @@ const Table=()=> {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  useEffect(() => {
+    (async () => {
+        const rows = data.map((x, index) => {
+            return {
+              id: x.seq,
+              organization: x.organisation,
+              Username: x.username,
+              Email: x.email,
+              Phone: x.phone,
+              Date: x.date,
+              Status: x.status    
+            };
+          });
+          setRow(rows);
+  
+     
+  
+    })();
+
+  },[]);
   const ITEM_HEIGHT = 48;
   const columns = [
     { field: 'organization', headerName: 'Organization', width: 120 },
@@ -143,7 +164,7 @@ const Table=()=> {
         >
           
             <MenuItem  onClick={()=>{
-            history.push(`/viewusers`);
+            history.push(`/viewusers/${JSON.stringify(params.id)}`);
             handleClose();
                 }}>
             <ListItemIcon>
@@ -179,7 +200,7 @@ const Table=()=> {
 
   return (
     <div className={classes.root} style={{ height: 600,marginTop:"2em", width: '98%',background:"#fff" }}>
-    <DataGrid rows={rows} columns={columns} />
+    <DataGrid rows={row} columns={columns} />
   </div>
   );
 }
