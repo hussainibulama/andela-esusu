@@ -1,0 +1,303 @@
+$font-family: "Nunito", sans-serif;
+
+.Section {
+  position: relative;
+  background: #fbfbfb;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  .section_Section {
+    position: relative;
+    padding: 3em;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+  }
+  .front {
+    position: relative;
+    .sepa {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      button {
+        position: relative;
+        background: transparent;
+        width: 170px;
+        margin-left: 1em;
+        height: 40px;
+        box-sizing: border-box;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      button.blist {
+        font-family: $font-family;
+        font-weight: bold;
+        border: 1px solid #e4033b;
+        color: #e4033b;
+      }
+      button.alist {
+        font-family: $font-family;
+        font-weight: bold;
+        border: 1px solid #39cdcc;
+        color: #39cdcc;
+      }
+    }
+    h3 {
+      font-family: $font-family;
+      position: relative;
+      font-size: 20px;
+      line-height: 28px;
+      color: #213f7d;
+    }
+  }
+  .micker {
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-sizing: border-box;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    .bots {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 95%;
+      margin-left: 1em;
+      margin-right: 1em;
+      div {
+        position: relative;
+        padding: 1em;
+        padding-bottom: 0em;
+      }
+      div.sur-active {
+        position: relative;
+        color: #39cdcc;
+        border-bottom: 2px solid #39cdcc;
+      }
+      div:hover {
+        position: relative;
+        color: #39cdcc;
+        border-bottom: 2px solid #39cdcc;
+      }
+    }
+    .tops {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      padding: 1.5em;
+      div {
+        padding: 1em;
+      }
+      .circlers {
+        position: relative;
+        background: #ebf0fa;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        img {
+          width: 40%;
+        }
+      }
+      .col1s {
+        border-right: 1px solid #e0e3eb;
+      }
+      .tesers {
+        position: relative;
+        font-family: $font-family;
+
+        align-self: center;
+
+        h3 {
+          color: #213f7d;
+          font-size: 22px;
+          font-weight: 700;
+          margin: 0;
+        }
+        p {
+          color: #545f7d;
+          font-weight: normal;
+          font-size: 14px;
+          margin: 0;
+        }
+      }
+    }
+  }
+  .middlers {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 925px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    .prosper {
+      position: relative;
+      width: 240px;
+      height: 160px;
+      background: #ffffff;
+      margin-right: 1em;
+      font-family: $font-family;
+      padding: 1em;
+      border: 1px solid rgba(33, 63, 125, 0.06);
+      box-sizing: border-box;
+      box-shadow: 3px 5px 20px rgba(90, 9, 9, 0.04);
+      border-radius: 4px;
+      .circle {
+        position: relative;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        img {
+          position: relative;
+          width: 50%;
+          z-index: 100;
+        }
+      }
+      .circle1 {
+        background: #fce6ff;
+      }
+      .circle2 {
+        background: #ece6ff;
+      }
+      .circle3 {
+        background: #feeae7;
+      }
+      .circle4 {
+        background: #ffe6ec;
+      }
+      p {
+        position: relative;
+        font-family: $font-family;
+        font-size: 14px;
+        color: #545f7d;
+      }
+      h3 {
+        position: relative;
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 22px;
+        color: #213f7d;
+      }
+    }
+  }
+  .footlers {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  .footly {
+    position: relative;
+    margin-top: 2em;
+    padding: 1em;
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-sizing: border-box;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    h2 {
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      /* identical to box height */
+
+      color: #213f7d;
+    }
+    hr {
+      opacity: 0.1;
+      margin-bottom: 1.5em;
+      border: 1px solid #213f7d;
+    }
+    div.server1 {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      div {
+        width: 175px;
+        p {
+          font-family: $font-family;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 14px;
+          /* identical to box height */
+
+          text-transform: uppercase;
+
+          color: #545f7d;
+        }
+        h3 {
+          font-family: $font-family;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 19px;
+          /* identical to box height */
+
+          color: #545f7d;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .section_Section {
+      position: relative;
+      padding: 0.5em !important;
+    }
+    .middlers {
+      width: 103%;
+      flex-wrap: wrap;
+
+      .prosper {
+        width: 103%;
+        margin-bottom: 1em;
+      }
+    }
+    .micker {
+      width: 95%;
+
+      .tops {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        .col1s {
+          border-right: 0px solid #e0e3eb;
+        }
+      }
+      .bots {
+        overflow-y: auto;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        div {
+          width: 100% !important;
+          line-break: none;
+          white-space: nowrap;
+        }
+      }
+    }
+    .footly {
+      width: 95% !important;
+      div.server1 {
+        position: relative;
+        display: flex;
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        div {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,205 @@
+$font-family: "Nunito", sans-serif;
+.Section {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  background: #ffff;
+
+  .left_section {
+    position: relative;
+    margin: 0 auto;
+    width: 45%;
+    background: #fcfcfc;
+    min-height: 100vh;
+    height: 100% !important;
+    padding: 0;
+    .top {
+      position: relative;
+      padding: 2em;
+      height: 10vh;
+      img {
+        margin: 2em;
+        width: 25%;
+      }
+    }
+    .flow {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 80vh;
+
+      .flow1 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        img {
+          position: relative;
+          background-size: cover;
+          background-position: center;
+          z-index: 20;
+          top: 0em;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .right_section {
+    position: relative;
+    width: 55%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    .form_section {
+      position: relative;
+      width: 70%;
+      height: 75%;
+      background: hsl(0, 0%, 100%);
+      align-content: left;
+
+      form {
+        position: relative;
+        padding: 2em;
+        height: 100%;
+
+        .top {
+          position: relative;
+          margin: 0 auto;
+          height: 20%;
+          text-align: left;
+          font-family: $font-family;
+          h3 {
+            font-family: $font-family;
+            font-style: bolder;
+            font-weight: bolder;
+            font-size: 30px;
+            line-height: 10px;
+            /* identical to box height */
+
+            color: #213f7d;
+          }
+          p {
+            font-family: $font-family;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 10px;
+            /* identical to box height */
+
+            color: #545f7d;
+          }
+        }
+        .scorp {
+          margin: 0em;
+          padding-bottom: 1.5em;
+          a {
+            position: relative;
+            font-family: $font-family;
+            text-decoration: none;
+            font-style: normal;
+            font-weight: 600;
+
+            font-size: 12px;
+            line-height: 16px;
+            /* identical to box height */
+            text-align: right;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+
+            color: #39cdcc;
+          }
+        }
+        .forms {
+          position: relative;
+          width: 100%;
+          height: 15%;
+
+          .former {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            height: 40px;
+            background: #ffffff;
+            border: 2px solid rgba(84, 95, 125, 0.15);
+            box-sizing: border-box;
+            border-radius: 5px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 3px;
+            padding: 0.5em;
+          }
+          span {
+            font-family: $font-family;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 16px;
+            text-align: center;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #39cdcc;
+            cursor: pointer;
+          }
+          input {
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            border: 1px solid transparent;
+            outline: none !important;
+            box-sizing: border-box;
+            font-family: $font-family;
+            font-size: 14px;
+            line-height: 19px;
+            color: #545f7d;
+          }
+          button {
+            width: 100%;
+            height: 36px;
+            background: #39cdcc;
+            border-radius: 8px;
+            font-family: $font-family;
+            font-style: normal;
+            font-weight: bold;
+            border: none !important;
+            font-size: 12px;
+            line-height: 22px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #113255;
+            cursor: pointer;
+            &:hover {
+              background: #c3f6fc;
+              color: #113255;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .left_section {
+      position: relative;
+      display: none;
+      visibility: hidden;
+    }
+    .right_section {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin: 0 auto;
+      .form_section {
+        height: 100%;
+        width: 90%;
+      }
+    }
+  }
+}

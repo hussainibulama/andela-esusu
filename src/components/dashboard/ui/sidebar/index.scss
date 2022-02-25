@@ -1,0 +1,129 @@
+$font-family: "Noto Sans", sans-serif;
+.fool {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  .operators {
+    position: relative;
+    display: flex;
+    line-height: 80px;
+    background: #fff;
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    align-content: center;
+    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+  }
+  .siders {
+    position: relative;
+    display: flex;
+    .Section_others {
+      position: relative;
+      width: 80%;
+      height: 100%;
+      min-height: 100vh;
+    }
+    .Section_Sidebar {
+      position: relative;
+      display: block;
+      position: relative;
+      background: #ffffff;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+      height: 75%;
+      min-height: 100vh;
+      font-family: $font-family;
+      width: 20%;
+
+      .top {
+        position: relative;
+        width: 100%;
+        padding: 1em;
+        img {
+          position: relative;
+          width: 40%;
+        }
+      }
+      .nav {
+        position: relative;
+        .padlincoin {
+          position: relative;
+          font-family: $font-family;
+          font-size: 12px;
+          color: #545f7d;
+          font-weight: 900;
+          padding-left: 2.5em;
+          margin: 0 !important;
+        }
+        .pro-sidebar {
+          position: relative;
+          width: 100% !important;
+          min-width: 100% !important;
+          font-family: $font-family !important;
+          color: #959595 !important;
+        }
+        .pro-sidebar > .pro-sidebar-inner {
+          background: inherit !important;
+          color: #213f7d;
+          opacity: 0.6;
+          margin: 0em !important;
+          padding: 0em !important;
+        }
+        .pro-item-content {
+          font-size: 13px !important;
+        }
+        .pro-sidebar
+          .pro-menu.shaped
+          .pro-menu-item
+          > .pro-inner-item
+          > .pro-icon-wrapper {
+          background-color: inherit !important;
+        }
+        .pro-sidebar
+          .pro-menu
+          > ul
+          > .pro-sub-menu
+          > .pro-inner-list-item
+          > div
+          > ul {
+          padding-top: 5px;
+          padding-bottom: 5px;
+        }
+
+        .pro-sidebar .pro-menu > ul > .pro-sub-menu > .pro-inner-list-item {
+          position: relative;
+          background-color: rgba(0, 0, 0, 0.8) !important;
+        }
+        .react-slidedown .pro-menu-item {
+          padding-left: 1.5em;
+        }
+
+        .pro-sidebar .pro-menu .pro-menu-item.active {
+          background: #ebfafa;
+          color: #213f7d;
+        }
+        .pro-sidebar .pro-menu .pro-menu-item.open {
+          background-color: rgba(0, 0, 0, 0.4) !important;
+        }
+      }
+      .foot {
+        position: relative;
+        top: 2em;
+        font-style: normal;
+        font-weight: normal;
+        font-family: $font-family;
+        font-size: 14px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        color: #959595;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .padlincoin {
+      display: none;
+    }
+  }
+}
