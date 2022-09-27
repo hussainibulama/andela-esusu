@@ -13,7 +13,7 @@ const PlayGround = ({
   onSquareRightClick,
 }) => {
   return (
-    <div className="game_Area">
+    <div className="game_Area" data-testid="game_Area">
       <Chessboard
         id="humanVsHuman"
         width={320}

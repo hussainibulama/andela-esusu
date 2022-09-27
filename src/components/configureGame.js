@@ -1,9 +1,7 @@
 import React, {useState} from 'react';
-import {Chess} from 'chess.js';
 import {squareStyling} from './styling';
 import PlayGround from './playGround';
-
-const game = new Chess();
+import {game} from './init';
 const GameConfiguration = () => {
   const [state, setState] = useState({
     fen: 'start',
